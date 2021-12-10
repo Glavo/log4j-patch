@@ -1,6 +1,6 @@
 # Log4j Patch
 [![Release](https://jitpack.io/v/org.glavo/log4j-patch.svg)](https://jitpack.io/#org.glavo/log4j-patch)
-[![](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-1.png)](http://www.wtfpl.net/)
+[![](http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png)](http://www.wtfpl.net/)
 
 Resolve the RCE vulnerability caused by JNDI lookup in log4j 2.0~2.14.1. It is licensed under the [WTFPL 2.0](http://www.wtfpl.net/faq/) license,
 you can do anything with it!
