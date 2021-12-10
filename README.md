@@ -11,7 +11,7 @@ compiled using java 6 and is compatible with all current Java versions.
 You can download it directly from GitHub
 release: [log4j-patch-1.0.jar](https://github.com/Glavo/log4j-patch/releases/download/1.0/log4j-patch-1.0.jar).
 
-If you are using Maven / gradle / SBT, adding it to the dependency should solve the problem (To be tested). I have
+If you are using Maven/Gradle/SBT, adding it to the dependency should solve the problem (To be tested). I have
 released it to [JitPack](https://jitpack.io/) and should publish it to Maven central soon. At present, please add
 JitPack repository first:
 
@@ -40,10 +40,6 @@ repositories {
 }
 ```
 
-SBT: 
-```sbt
-resolvers += "jitpack" at "https://jitpack.io"
-```
 
 Then, add a dependency on it:
 
@@ -67,9 +63,4 @@ Gradle Kotlin DSL:
 dependencies {
     implementation("org.glavo:log4j-patch:1.0")
 }
-```
-
-SBT:
-```sbt
- libraryDependencies += "org.glavo" % "log4j-patch" % "1.0"
 ```
