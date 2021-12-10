@@ -12,13 +12,11 @@ The principle of the library is simple:
 It provides an empty `JndiLookup` to override the implementation in log4j. 
 Log4j2 can handle this situation and safely disable JNDI lookup.
 
+It is compatible with all versions of log4j2, including log4j 2.15.
+
 ## Usage
 
 You can add it to the classpath by yourself, or you can use javaagent to inject it automatically.
-
-It will disable JNDI lookup and avoid RCE vulnerabilities. 
-
-It is compatible with all versions of log4j2.
 
 ### Use Java Agent
 
