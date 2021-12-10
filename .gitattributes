@@ -1,1 +1,1 @@
-*.kts linguist-detectable=false
+*.gradle.kts linguist-detectable=false
