@@ -1,7 +1,7 @@
 # Log4j Patch
 
-Resolve the RCE vulnerability caused by JNDI lookup in log4j 2.0~2.14.1. This library is placed in the **public domain**
-and you can use it at will.
+Resolve the RCE vulnerability caused by JNDI lookup in log4j 2.0~2.14.1. It is licensed under the [WTFPL 2.0](http://www.wtfpl.net/faq/) license,
+you can do anything with it!
 
 The principle of the library is simple: It provides an empty `JndiLookup` to override the implementation in log4j.
 
