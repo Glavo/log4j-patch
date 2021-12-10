@@ -6,7 +6,7 @@ Resolve the RCE vulnerability caused by JNDI lookup in log4j 2.0~2.14.1. It is l
 you can do anything with it!
 
 This is a **non-intrusive** patch that allows you to block this vulnerability without modifying the program code/updating the dependent.
-So you can use it to patch third-party programs, such as Minecraft Client/Server.
+So you can use it to patch third-party programs, such as Minecraft.
 
 The principle of the library is simple: 
 It provides an empty `JndiLookup` to override the implementation in log4j. 
