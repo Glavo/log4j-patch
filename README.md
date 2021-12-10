@@ -5,11 +5,17 @@
 Resolve the RCE vulnerability caused by JNDI lookup in log4j 2.0~2.14.1. It is licensed under the [WTFPL 2.0](http://www.wtfpl.net/faq/) license,
 you can do anything with it!
 
+This is a **non-intrusive** patch that allows you to block this vulnerability without modifying the program code/updating the dependent.
+So you can use it to patch third-party programs, such as Minecraft Client/Server.
+
 The principle of the library is simple: 
-It provides an empty `JndiLookup` to override the implementation in log4j. Log4j2 can handle this situation and safely disable JNDI lookup.
+It provides an empty `JndiLookup` to override the implementation in log4j. 
+Log4j2 can handle this situation and safely disable JNDI lookup.
 
 You can download it directly from GitHub release:
 [log4j-patch-1.0.jar](https://github.com/Glavo/log4j-patch/releases/download/1.0/log4j-patch-1.0.jar).
+
+## Usage
 
 All you need to do is add it to the front of the classpath to disable JNDI lookup and avoid RCE vulnerabilities. 
 It is compatible with all versions of log4j2.
