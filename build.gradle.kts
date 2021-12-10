@@ -8,17 +8,23 @@ plugins {
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
 }
 
-group = "org.glavo"
-version = "1.0"
+allprojects {
+    apply {
+        plugin("java")
+    }
+
+    group = "org.glavo"
+    version = "1.0"
+
+    tasks.compileJava {
+        sourceCompatibility = "6"
+        targetCompatibility = "6"
+    }
+}
 
 java {
     withSourcesJar()
     withJavadocJar()
-}
-
-tasks.compileJava {
-    sourceCompatibility = "6"
-    targetCompatibility = "6"
 }
 
 repositories {
