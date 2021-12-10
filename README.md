@@ -12,7 +12,7 @@ The principle of the library is simple:
 It provides an empty `JndiLookup` to override the implementation in log4j. 
 Log4j2 can handle this situation and safely disable JNDI lookup.
 
-It is compatible with all versions of log4j2, including log4j 2.15.
+It is compatible with all versions of log4j2 (2.0~2.15).
 
 ## Usage
 
