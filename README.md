@@ -16,6 +16,10 @@ Log4j2 can handle this situation and safely disable JNDI lookup.
 
 You can add it to the classpath by yourself, or you can use javaagent to inject it automatically.
 
+It will disable JNDI lookup and avoid RCE vulnerabilities. 
+
+It is compatible with all versions of log4j2.
+
 ### Use Java Agent
 
 First, download the agent jar: [log4j-patch-agent-1.0.jar](https://github.com/Glavo/log4j-patch/releases/download/1.0/log4j-patch-agent-1.0.jar).
@@ -27,8 +31,7 @@ You only need to add the `-javaagent:log4j-patch-agent-1.0.jar` to the JVM param
 Sometimes you may not want to use Java agent, such as when you need to generate native-image. You can download it directly from GitHub release:
 [log4j-patch-1.0.jar](https://github.com/Glavo/log4j-patch/releases/download/1.0/log4j-patch-1.0.jar).
 
-All you need to do is add it to the front of the classpath to disable JNDI lookup and avoid RCE vulnerabilities. 
-It is compatible with all versions of log4j2.
+All you need to do is add it to the front of the classpath.
 
 If you are using log4j2 as a Java module, use this JVM parameter instead of adding it to the classpath: 
 `--patch-module org.apache.logging.log4j.core=log4j-patch-1.0.jar`.
@@ -61,3 +64,13 @@ dependencies {
     implementation("org.glavo:log4j-patch:1.0")
 }
 ```
+
+## Check whether the replacement is successful
+
+When JNDI lookup is disabled, log4j may print similar content in the log:
+```
+2021-12-10 15:50:39,521 main WARN JNDI lookup class is not available because this JRE does not support JNDI. JNDI string lookups will not be available, continuing configuration. Ignoring java.lang.ClassCastException: class org.apache.logging.log4j.core.lookup.JndiLookup
+```
+
+in addition, if you use the agent, it will set the system property `org.glavo.log4j.patch.agent.patched"` to `true` when the replacement is successful.
+We can use the `jinfo` command line tool to observe the system properties of the JVM process.
