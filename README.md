@@ -11,8 +11,10 @@ compiled using java 6 and is compatible with all current Java versions.
 You can download it directly from GitHub
 release: [log4j-patch-1.0.jar](https://github.com/Glavo/log4j-patch/releases/download/1.0/log4j-patch-1.0.jar).
 
-If you are using Maven/Gradle/SBT, adding it to the dependency should solve the problem (To be tested). I have
-released it to [JitPack](https://jitpack.io/) and should publish it to Maven central soon. At present, please add
+## Adding patch to your build
+
+If you are using Maven/Gradle/SBT, adding it as the first dependency should solve the problem (To be tested). 
+I have publish it to [JitPack](https://jitpack.io/) and should publish it to Maven central soon. At present, please add
 JitPack repository first:
 
 Maven:
