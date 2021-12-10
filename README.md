@@ -18,39 +18,11 @@ If you are using log4j2 as a Java module, use this JVM parameter instead of addi
 
 ## Adding patch to your build
 
-If you are using Maven/Gradle/SBT, adding it as the first dependency should solve the problem (To be tested). 
-I have published it to [JitPack](https://jitpack.io/). It has also been published to Maven Central, but is waiting for synchronization, please wait a little bit.
+If you are using Maven/Gradle/SBT, adding it as the first dependency should solve the problem. 
 
-At present, please add JitPack repository first:
+It is published on Maven Central. You can add dependencies on it in this way:
 
 Maven:
-```xml
-
-<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
-```
-
-Gradle:
-```groovy
-repositories {
-    maven { url 'https://jitpack.io' }
-}
-```
-
-Gradle Kotlin DSL:
-```kotlin
-repositories {
-    maven(url = "https://jitpack.io")
-}
-```
-
-
-Then, add a dependency on it:
-
 ```xml
 <dependency>
     <groupId>org.glavo</groupId>
