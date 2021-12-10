@@ -70,5 +70,5 @@ When JNDI lookup is disabled, log4j may print similar content in the log:
 2021-12-10 15:50:39,521 main WARN JNDI lookup class is not available because this JRE does not support JNDI. JNDI string lookups will not be available, continuing configuration. Ignoring java.lang.ClassCastException: class org.apache.logging.log4j.core.lookup.JndiLookup
 ```
 
-in addition, if you use the agent, it will set the system property `org.glavo.log4j.patch.agent.patched"` to `true` when the replacement is successful.
+in addition, if you use the agent, it will set the system property `org.glavo.log4j.patch.agent.patched` to `true` when the replacement is successful.
 We can use the `jinfo` command line tool to observe the system properties of the JVM process.
