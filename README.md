@@ -31,6 +31,8 @@ Sometimes you may not want to use Java agent, such as when you need to generate 
 
 All you need to do is add it to the front of the classpath.
 
+**If you are using java 8, it is best to put it into `$JAVA_HOME/lib/ext`, which will protect programs started with that Java.**
+
 If you are using log4j2 as a Java module, use this JVM parameter instead of adding it to the classpath: 
 `--patch-module org.apache.logging.log4j.core=log4j-patch-1.0.jar`.
 
